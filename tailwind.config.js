@@ -12,6 +12,15 @@ module.exports = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      fontFamily: {
+        inter: "Inter",
+      },
+      colors: {
+        primary: '#7868E6',
+        black: '#121212',
+        grey: '#929292',
+        lightgrey: '#C7C9D9',
+      },
     },
   },
   plugins: [],
