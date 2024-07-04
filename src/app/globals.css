@@ -17,7 +17,8 @@
 
 .nav {
   @apply
-  py-10
+  py-5
+  min-[400px]:py-10
 }
 
 .nav .content-container {
@@ -70,7 +71,8 @@
   md:max-w-[369px]
   min-[1140px]:max-w-[579px]
   h-max
-  py-[50px]
+  py-8
+  min-[400px]:py-[50px]
   space-y-6
   text-center
   md:text-left
@@ -278,7 +280,8 @@
 .specialities-section {
   @apply
   mt-[38px]
-  py-28
+  py-7
+  min-[400px]:py-28
 }
 
 .title-description-wrapper {
@@ -312,7 +315,7 @@
   min-[880px]:grid-cols-3
   gap-x-9
   lg:gap-x-24
-  gap-y-5
+  gap-y-6
   min-[600px]:gap-y-9
 }
 
@@ -374,7 +377,8 @@
 .portfolio-section {
   @apply
   mt-[38px]
-  py-28
+  py-7
+  min-[400px]:py-28
 }
 
 .image-portfolio-wrapper .row-1 {
@@ -452,8 +456,9 @@
 
 .footer {
   @apply
-  pt-2
-  pb-[59px]
+  py-7
+  min-[400px]:pt-2
+  min-[400px]:pb-[59px]
 }
 
 .footer .content-container {
