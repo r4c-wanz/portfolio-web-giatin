@@ -4,9 +4,8 @@
 
 .header {
   @apply
-  h-screen
+  min-h-screen
   bg-[#f9f8ff]
-  /* overflow-hidden */
 }
 
 .content-container {
@@ -118,7 +117,7 @@
   @apply
   relative
   w-full
-  h-[522px]
+  md:h-[522px]
   min-[1140px]:h-[572px]
   justify-center
   md:justify-end
@@ -128,38 +127,28 @@
 
 .component-wrapper {
   @apply
-  absolute
-  left-0
-  max-[768px]:left-1/2
-  max-[768px]:-translate-x-1/2
-  md:right-0
-  w-28
-  min-[559px]:w-[599px]
-  min-[990px]:w-[649px]
-  min-[1140px]:w-[699px]
-  h-28
-  min-[990px]:h-[522px]
-  min-[1140px]:h-[572px]
+  md:absolute
+  max-md:left-0
+  right-0
+  w-full
+  md:min-w-[699px]
+  max-w-[699px]
+  flex
+  justify-end
 }
 
 .component-wrapper .border-image {
   @apply
-  absolute
-  left-[127px]
-  top-0
-  right-0
-  bottom-0
+  relative
+  w-full
+  max-w-[572px]
   h-full
 }
 
 .component-wrapper .circle {
   @apply
-  absolute
-  left-0
-  top-0
-  right-0
-  bottom-0
   w-full
+  h-full
 }
 
 .component-wrapper .hero-image {
@@ -176,7 +165,8 @@
   @apply
   absolute
   left-0
-  top-[234px]
+  bottom-0
+  min-[660px]:bottom-[123px]
   max-w-56
   bg-white
   rounded-lg
