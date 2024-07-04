@@ -171,6 +171,7 @@
   bg-white
   rounded-lg
   shadow-[0_24px_34px_0_rgba(199,201,217,.25)]
+  max-[620px]:hidden
   p-7
   space-y-[22px]
 }
@@ -246,6 +247,7 @@
   top-[15px]
   right-[18px]
   w-[174px]
+  max-[460px]:hidden
 }
 
 .teks-message .rectangle {
