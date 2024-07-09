@@ -12,14 +12,25 @@ module.exports = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
-      fontFamily: {
-        inter: "Inter",
-      },
       colors: {
         primary: '#7868E6',
         black: '#121212',
         grey: '#929292',
         lightgrey: '#C7C9D9',
+      },
+      animation: {
+        'rotate-right': 'rotate-right 50s linear infinite',
+        'rotate-left': 'rotate-left 50s linear infinite',
+      },
+      keyframes: {
+        'rotate-right': {
+          '0%': { transform: 'rotate(0deg)' },
+          '100%': { transform: 'rotate(360deg)' },
+        },
+        'rotate-left': {
+          '0%': { transform: 'rotate(0deg)' },
+          '100%': { transform: 'rotate(-360deg)' },
+        },
       },
     },
   },

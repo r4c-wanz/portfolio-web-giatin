@@ -34,7 +34,7 @@ export default function Home() {
                     viewBox="0 0 576 576"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
-                    className="circle"
+                    className="circle animate-rotate-right"
                   >
                     <circle
                       cx="288"

@@ -18,7 +18,7 @@
 .nav {
   @apply
   py-5
-  min-[400px]:py-10
+  sm:py-10
 }
 
 .nav .content-container {
@@ -45,7 +45,7 @@
   @apply
   h-max
   hidden
-  min-[580px]:flex
+  sm:flex
   items-center
   gap-x-10
   text-sm
@@ -69,10 +69,10 @@
   @apply
   w-full
   md:max-w-[369px]
-  min-[1140px]:max-w-[579px]
+  xl:max-w-[579px]
   h-max
   py-8
-  min-[400px]:py-[50px]
+  sm:py-[50px]
   space-y-6
   text-center
   md:text-left
@@ -83,10 +83,10 @@
 .left-hero-content h1 {
   @apply
   text-5xl
-  min-[1140px]:text-[54px]
+  xl:text-[54px]
   font-bold
   leading-[64px]
-  min-[1140px]:leading-[70px]
+  xl:leading-[70px]
   tracking-[.02em]
   text-black
 }
@@ -119,8 +119,7 @@
   @apply
   relative
   w-full
-  md:h-[522px]
-  min-[1140px]:h-[572px]
+  md:h-[572px]
   justify-center
   md:justify-end
   order-1
@@ -135,6 +134,8 @@
   w-full
   md:min-w-[699px]
   max-w-[699px]
+  h-[600px]
+  sm:h-full
   flex
   justify-end
 }
@@ -144,7 +145,8 @@
   relative
   w-full
   max-w-[572px]
-  h-full
+  h-max
+  overflow-hidden
 }
 
 .component-wrapper .circle {
@@ -156,11 +158,14 @@
 .component-wrapper .hero-image {
   @apply
   absolute
-  left-[41px]
-  top-[41px]
+  left-[31px]
+  sm:left-[41px]
+  top-[31px]
+  sm:top-[41px]
   right-10
   bottom-10
-  w-[calc(100%-81px)]
+  w-[calc(100%-61px)]
+  sm:w-[calc(100%-81px)]
 }
 
 .task-progress {
@@ -168,12 +173,13 @@
   absolute
   left-0
   bottom-0
-  min-[660px]:bottom-[123px]
-  max-w-56
+  sm:bottom-[123px]
+  w-full
+  sm:w-56
+  max-w-64
   bg-white
   rounded-lg
   shadow-[0_24px_34px_0_rgba(199,201,217,.25)]
-  max-[620px]:hidden
   p-7
   space-y-[22px]
 }
@@ -199,7 +205,6 @@
 
 .bar-wrapper {
   @apply
-  w-[168px]
   h-[3px]
   rounded-full
 }
@@ -249,7 +254,6 @@
   top-[15px]
   right-[18px]
   w-[174px]
-  max-[460px]:hidden
 }
 
 .teks-message .rectangle {
@@ -281,7 +285,7 @@
   @apply
   mt-[38px]
   py-7
-  min-[400px]:py-28
+  sm:py-28
 }
 
 .title-description-wrapper {
@@ -311,12 +315,12 @@
   mt-[60px]
   grid
   grid-cols-1
-  min-[600px]:grid-cols-2
-  min-[880px]:grid-cols-3
+  sm:grid-cols-2
+  md:grid-cols-3
   gap-x-9
   lg:gap-x-24
-  gap-y-6
-  min-[600px]:gap-y-9
+  gap-y-5
+  sm:gap-y-9
 }
 
 .card-wrapper .color-line {
@@ -378,7 +382,7 @@
   @apply
   mt-[38px]
   py-7
-  min-[400px]:py-28
+  sm:py-28
 }
 
 .image-portfolio-wrapper .row-1 {
@@ -386,7 +390,7 @@
   mt-[60px]
   grid
   grid-cols-1
-  min-[678px]:grid-cols-2
+  sm:grid-cols-2
   gap-x-[30px]
   gap-y-[60px]
 }
@@ -401,7 +405,7 @@
   mt-5
   font-bold
   text-xl
-  min-[1200px]:text-[28px]
+  lg:text-[28px]
   leading-9
   tracking-[.03em]
   text-black
@@ -421,8 +425,8 @@
   mt-[60px]
   grid
   grid-cols-1
-  min-[678px]:grid-cols-2
-  min-[1200px]:grid-cols-3
+  sm:grid-cols-2
+  lg:grid-cols-3
   gap-x-[30px]
   gap-y-[60px]
 }
@@ -430,8 +434,8 @@
 .image-portfolio-wrapper .row-2 .portfolio-image {
   @apply
   w-full
-  min-[1200px]:h-full
-  min-[1200px]:max-h-[284px]
+  lg:h-full
+  lg:max-h-[284px]
   object-cover
 }
 
@@ -457,15 +461,15 @@
 .footer {
   @apply
   py-7
-  min-[400px]:pt-2
-  min-[400px]:pb-[59px]
+  sm:pt-2
+  sm:pb-[59px]
 }
 
 .footer .content-container {
   @apply
   flex
   flex-col
-  min-[740px]:flex-row
+  sm:flex-row
   justify-between
   items-center
   gap-y-6
@@ -473,21 +477,22 @@
 
 .footer .main-link {
   @apply
-  max-[524px]:w-full
+  w-full
+  sm:w-max
   font-semibold
   text-2xl
   tracking-[.02em]
   text-black
-  max-[524px]:text-center
+  text-center
 }
 
 .footer .link-wrapper {
   @apply
-  w-max
-  max-[524px]:w-full
+  w-full
+  sm:w-max
   flex
   flex-col
-  min-[524px]:flex-row
+  sm:flex-row
   justify-center
   items-center
   gap-x-10
@@ -497,14 +502,14 @@
 
 .footer .link-wrapper a {
   @apply
-  w-max
-  max-[524px]:w-full
-  max-[524px]:text-center
+  w-full
+  sm:w-max
+  text-center
 }
 
 .footer .link-wrapper .button-hire {
   @apply
-  min-[524px]:w-[94px]
+  sm:w-[94px]
   h-11
   bg-primary
   rounded-lg
