@@ -1,6 +1,44 @@
+"use client";
+import { useRef, useEffect, useState } from "react";
+import { motion } from "framer-motion";
 import Image from "next/image";
 
 export default function Home() {
+  const [scrollDirection, setScrollDirection] = useState(null);
+  const [currentRotation, setCurrentRotation] = useState(0);
+  const [lastScrollTop, setLastScrollTop] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const st = window.pageYOffset || document.documentElement.scrollTop;
+      if (st > lastScrollTop) {
+        setScrollDirection('down');
+      } else {
+        setScrollDirection('up');
+      }
+      setLastScrollTop(st <= 0 ? 0 : st);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [lastScrollTop]);
+
+  useEffect(() => {
+    let rotationInterval;
+    if (scrollDirection === 'up') {
+      rotationInterval = setInterval(() => {
+        setCurrentRotation(prev => prev - 0.36); // -0.36 degrees per frame
+      }, 50); // 20 frames per second
+    } else {
+      rotationInterval = setInterval(() => {
+        setCurrentRotation(prev => prev + 0.36); // 0.36 degrees per frame
+      }, 50); // 20 frames per second
+    }
+    return () => clearInterval(rotationInterval);
+  }, [scrollDirection]);
+
   return (
     <>
       <header className="header">
@@ -34,7 +72,8 @@ export default function Home() {
                     viewBox="0 0 576 576"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
-                    className="circle animate-rotate-right"
+                    className="circle"
+                    style={{ transform: `rotate(${currentRotation}deg)` }}
                   >
                     <circle
                       cx="288"
@@ -219,7 +258,7 @@ export default function Home() {
                   alt="Portofolio Image 1"
                   width={500}
                   height={500}
-                  lazy
+                  loading="lazy"
                   className="portfolio-image"
                 />
                 <h1>StarVest Webpage</h1>
@@ -231,7 +270,7 @@ export default function Home() {
                   alt="Portofolio Image 2"
                   width={500}
                   height={500}
-                  lazy
+                  loading="lazy"
                   className="portfolio-image"
                 />
                 <h1>EcoWise Life App</h1>
@@ -245,7 +284,7 @@ export default function Home() {
                   alt="Portofolio Image 3"
                   width={500}
                   height={500}
-                  lazy
+                  loading="lazy"
                   className="portfolio-image"
                 />
                 <h1>JED Webpage</h1>
@@ -257,7 +296,7 @@ export default function Home() {
                   alt="Portofolio Image 4"
                   width={500}
                   height={500}
-                  lazy
+                  loading="lazy"
                   className="portfolio-image"
                 />
                 <h1>UI EpiClass</h1>
@@ -269,7 +308,7 @@ export default function Home() {
                   alt="Portofolio Image 5"
                   width={500}
                   height={500}
-                  lazy
+                  loading="lazy"
                   className="portfolio-image"
                 />
                 <h1>UI Laptop Shop</h1>

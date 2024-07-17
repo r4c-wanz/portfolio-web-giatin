@@ -152,7 +152,8 @@
 .component-wrapper .circle {
   @apply
   w-full
-  h-full
+  h-full;
+  transition: transform 0.05s linear;
 }
 
 .component-wrapper .hero-image {
