@@ -39,6 +39,17 @@ export default function Home() {
     return () => clearInterval(rotationInterval);
   }, [scrollDirection]);
 
+  useEffect(() => {
+    const progressBars = document.querySelectorAll('.progress-bar');
+    progressBars.forEach((bar, index) => {
+      const percentage = bar.getAttribute('data-percentage');
+      setTimeout(() => {
+        bar.style.width = `${percentage}%`;
+        bar.classList.add('animate');
+      }, index * 500); // Jeda 500ms antara setiap progress bar
+    });
+  }, []);
+
   return (
     <>
       <header className="header">
@@ -98,20 +109,20 @@ export default function Home() {
                   <h1 className="title">My Skills</h1>
                   <div className="progress-skills-wrapper">
                     <h1>Frontend Developer</h1>
-                    <div className="bar-wrapper bar-wrapper-1">
-                      <div className="bar bar-1"></div>
+                    <div className="progress-bar-wrapper progress-bar-wrapper-1">
+                      <div className="progress-bar progress-bar-1" data-percentage="80"></div>
                     </div>
                   </div>
                   <div className="progress-skills-wrapper">
                     <h1>Programing</h1>
-                    <div className="bar-wrapper bar-wrapper-2">
-                      <div className="bar bar-2"></div>
+                    <div className="progress-bar-wrapper progress-bar-wrapper-2">
+                      <div className="progress-bar progress-bar-2" data-percentage="80"></div>
                     </div>
                   </div>
                   <div className="progress-skills-wrapper">
                     <h1>UI/UX Designers</h1>
-                    <div className="bar-wrapper bar-wrapper-3">
-                      <div className="bar bar-3"></div>
+                    <div className="progress-bar-wrapper progress-bar-wrapper-3">
+                      <div className="progress-bar progress-bar-3" data-percentage="50"></div>
                     </div>
                   </div>
                 </div>

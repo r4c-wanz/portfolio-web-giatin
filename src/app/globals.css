@@ -204,48 +204,49 @@
   text-black
 }
 
-.bar-wrapper {
+.progress-bar-wrapper {
   @apply
   h-[3px]
   rounded-full
 }
 
-.bar-wrapper-1 {
+.progress-bar-wrapper-1 {
   @apply
   bg-[#5448a11a]
 }
 
-.bar-wrapper-2 {
+.progress-bar-wrapper-2 {
   @apply
   bg-[#a154481a]
 }
 
-.bar-wrapper-3 {
+.progress-bar-wrapper-3 {
   @apply
   bg-[#48a1541a]
 }
 
-.bar {
+.progress-bar {
   @apply
   h-full
-  rounded-full
+  rounded-full;
+  transition: width 2s ease-in-out; /* Durasi animasi 2 detik */
 }
 
-.bar-1 {
+.progress-bar-1 {
   @apply
-  w-4/5
+  w-0
   bg-[#7868e6]
 }
 
-.bar-2 {
+.progress-bar-2 {
   @apply
-  w-4/5
+  w-0
   bg-[#e67868]
 }
 
-.bar-3 {
+.progress-bar-3 {
   @apply
-  w-1/2
+  w-0
   bg-[#68e678]
 }
 
