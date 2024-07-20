@@ -137,6 +137,8 @@
   h-[600px]
   sm:h-full
   flex
+  pt-24
+  sm:pt-0
   justify-end
 }
 
