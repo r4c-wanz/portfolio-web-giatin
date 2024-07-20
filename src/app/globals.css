@@ -182,7 +182,13 @@
   rounded-lg
   shadow-[0_24px_34px_0_rgba(199,201,217,.25)]
   p-7
-  space-y-[22px]
+  space-y-[22px];
+  transition: transform 1s ease-in-out;
+  transform: scale(0);
+}
+
+.task-progress.show {
+  transform: scale(1);
 }
 
 .task-progress .title {
@@ -250,15 +256,24 @@
   bg-[#68e678]
 }
 
-.teks-message {
+.message {
   @apply
   absolute
   top-[15px]
   right-[18px]
-  w-[174px]
+  w-[174px];
+  transition: transform 1.3s ease-in-out, opacity 1.8s ease-in-out;
+  transform-origin: left bottom;
+  transform: scale(0);
+  opacity: 0;
 }
 
-.teks-message .rectangle {
+.message.animate {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.message .rectangle {
   @apply
   bg-white
   rounded-lg
@@ -275,7 +290,7 @@
   text-black
 }
 
-.teks-message .triangle {
+.message .triangle {
   @apply
   ml-[18px]
   -mt-px

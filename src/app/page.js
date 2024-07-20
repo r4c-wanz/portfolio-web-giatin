@@ -7,6 +7,7 @@ export default function Home() {
   const [scrollDirection, setScrollDirection] = useState(null);
   const [currentRotation, setCurrentRotation] = useState(0);
   const [lastScrollTop, setLastScrollTop] = useState(0);
+  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -46,8 +47,20 @@ export default function Home() {
       setTimeout(() => {
         bar.style.width = `${percentage}%`;
         bar.classList.add('animate');
-      }, index * 500); // Jeda 500ms antara setiap progress bar
+      }, index * 1000);
     });
+  }, []);
+
+  useEffect(() => {
+    const taskProgress = document.querySelector('.task-progress');
+    taskProgress.classList.add('show');
+  }, []);
+
+  useEffect(() => {
+    const message = document.querySelector('.message');
+    setTimeout(() => {
+      message.classList.add('animate');
+    }, 1800);
   }, []);
 
   return (
@@ -126,7 +139,7 @@ export default function Home() {
                     </div>
                   </div>
                 </div>
-                <div className="teks-message">
+                <div className="message">
                   <div className="rectangle">
                     <p>Hello, I’m Rachel Setyawan, a Frontend Web Developer.</p>
                   </div>
