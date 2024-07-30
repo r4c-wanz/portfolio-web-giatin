@@ -28,29 +28,79 @@
   items-center
 }
 
-.nav-main-link {
+.nav .main-link {
   @apply
+  relative
   font-semibold
   text-2xl
   tracking-[.02em]
   text-black
 }
 
-.nav-main-link span {
+.nav .main-link::before {
+  content: "";
+  transition: transform 0.3s ease;
+  @apply
+  absolute
+  block
+  w-full
+  h-0.5
+  -bottom-0.5
+  left-0
+  bg-primary
+  rounded-full
+  scale-x-0
+  origin-left
+}
+
+.nav .main-link:hover::before {
+  @apply
+  scale-x-100
+}
+
+.nav .main-link span {
   @apply
   text-primary
 }
 
-.nav-link-wrapper {
+.nav .link-wrapper {
   @apply
   h-max
   hidden
   sm:flex
   items-center
   gap-x-10
+}
+
+.nav .link-wrapper .link {
+  @apply
+  relative
   text-sm
+  leading-normal
   tracking-[.02em]
   text-black
+  font-normal
+}
+
+.nav .link-wrapper .link::before {
+  content: "";
+  transition: transform 0.3s ease;
+  @apply
+  absolute
+  block
+  w-full
+  h-0.5
+  -bottom-0.5
+  left-0
+  bg-black
+  rounded-full
+  scale-x-0
+  origin-left
+}
+
+.nav .link-wrapper .link:hover::before {
+  @apply
+  scale-x-100
 }
 
 .header-content-wrapper {
@@ -214,6 +264,7 @@
 
 .progress-bar-wrapper {
   @apply
+  block
   h-[3px]
   rounded-full
 }
@@ -496,6 +547,7 @@
 
 .footer .main-link {
   @apply
+  relative
   w-full
   sm:w-max
   font-semibold
@@ -503,6 +555,27 @@
   tracking-[.02em]
   text-black
   text-center
+}
+
+.footer .main-link::before {
+  content: "";
+  transition: transform 0.3s ease;
+  @apply
+  absolute
+  block
+  w-full
+  h-0.5
+  -bottom-0.5
+  left-0
+  bg-black
+  rounded-full
+  scale-x-0
+  origin-left
+}
+
+.footer .main-link:hover::before {
+  @apply
+  scale-x-100
 }
 
 .footer .link-wrapper {
@@ -516,7 +589,33 @@
   items-center
   gap-x-10
   gap-y-6
+}
+
+.footer .link-wrapper .link {
+  @apply
+  relative
   text-black
+}
+
+.footer .link-wrapper .link::before {
+  content: "";
+  transition: transform 0.3s ease;
+  @apply
+  absolute
+  block
+  w-full
+  h-0.5
+  -bottom-0.5
+  left-0
+  bg-black
+  rounded-full
+  scale-x-0
+  origin-left
+}
+
+.footer .link-wrapper .link:hover::before {
+  @apply
+  scale-x-100
 }
 
 .footer .link-wrapper a {

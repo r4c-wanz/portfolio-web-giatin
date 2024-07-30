@@ -1,6 +1,6 @@
 "use client";
-import { useRef, useEffect, useState } from "react";
-import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
+import Link from "next/link";
 import Image from "next/image";
 
 export default function Home() {
@@ -68,14 +68,14 @@ export default function Home() {
       <header className="header">
         <nav className="nav">
           <div className="content-container">
-            <a href="/" className="nav-main-link">
+            <Link href="/" className="main-link">
               Rachel <span>Setyawan</span>
-            </a>
-            <div className="nav-link-wrapper">
-              <a href="#">Project</a>
-              <a href="#">Journey</a>
-              <a href="#">Service</a>
-              <a href="#">Contact</a>
+            </Link>
+            <div className="link-wrapper">
+              <a href="#" className="link">Project</a>
+              <a href="#" className="link">Journey</a>
+              <a href="#" className="link">Service</a>
+              <a href="#" className="link">Contact</a>
             </div>
           </div>
         </nav>
@@ -344,21 +344,15 @@ export default function Home() {
       </section>
       <footer className="footer">
         <div className="content-container">
-          <a href="/" className="main-link">
+          <Link href="/" className="main-link link">
             Rachel Setyawan
-          </a>
+          </Link>
           <div className="link-wrapper">
-            <a href="https://github.com/r4c-wanz" target="_blank">
+            <a href="https://github.com/r4c-wanz" className="link" target="_blank">
               Github
             </a>
-            <a href="https://www.instagram.com/rsh_78.6" target="_blank">
-              Instagram
-            </a>
-            <a href="https://dribbble.com/rachelsetyawan" target="_blank">
-              Dribble
-            </a>
-            <a href="https://www.behance.net/rachelsetyawan" target="_blank">
-              Behance
+            <a href="https://www.linkedin.com/in/rachel-setyawan-624102294" className="link" target="_blank">
+              LinkedIn
             </a>
             <a href="mailto:rahelsetyawan321@gmai.com" className="button-hire">
               Hire Me
